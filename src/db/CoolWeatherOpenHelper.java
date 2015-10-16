@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class CoolWeatherOpenHelper extends SQLiteOpenHelper{
 
+	
 	/**
 	 * Province表建表语句	 
 	 */
@@ -25,7 +26,7 @@ public class CoolWeatherOpenHelper extends SQLiteOpenHelper{
 	 /**
 	   * County表建表语句
 	   */
-	 public static final String CREATE_COUNTY = "create table City("
+	 public static final String CREATE_COUNTY = "create table County("
 				 +"id integer primary key autoincrement,"
 				 +"county_name text,"
 				 +"county_code text,"
@@ -40,7 +41,9 @@ public class CoolWeatherOpenHelper extends SQLiteOpenHelper{
 		db.execSQL(CREATE_PROVINCE);//创建province表
 		db.execSQL(CREATE_CITY);//创建City表
 		db.execSQL(CREATE_COUNTY);//创建County表
+		
 	}
+
 
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
