@@ -1,18 +1,17 @@
-package factivity;
+package com.coolweather.app.activity;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import util.HttpCallbackListener;
-import util.HttpUtil;
-import util.Utility;
-
 import com.coolweather.app.R;
+import com.coolweather.app.model.City;
+import com.coolweather.app.model.CoolWeatherDB;
+import com.coolweather.app.model.County;
+import com.coolweather.app.model.Province;
+import com.coolweather.app.util.HttpCallbackListener;
+import com.coolweather.app.util.HttpUtil;
+import com.coolweather.app.util.Utility;
 
-import model.City;
-import model.CoolWeatherDB;
-import model.County;
-import model.Province;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.os.Bundle;
@@ -120,6 +119,7 @@ public class ChooseAreaActivity extends Activity{
 			
 		}else{
 			queryFromServer(selectedProvince.getProvinceCode(),"city");
+			
 		}
 	}
 	/**
@@ -137,9 +137,6 @@ public class ChooseAreaActivity extends Activity{
 			listView.setSelection(0);
 			titleText.setText(selectedCity.getCityName());
 			currentLevel = LEVEL_COUNTY;
-			
-			
-			
 			
 		}else{
 			queryFromServer(selectedCity.getCityCode(),"county");
@@ -237,23 +234,4 @@ public class ChooseAreaActivity extends Activity{
 		}
 	}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }

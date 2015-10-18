@@ -1,10 +1,11 @@
-package util;
+package com.coolweather.app.util;
+
+import com.coolweather.app.model.City;
+import com.coolweather.app.model.CoolWeatherDB;
+import com.coolweather.app.model.County;
+import com.coolweather.app.model.Province;
 
 import android.text.TextUtils;
-import model.City;
-import model.CoolWeatherDB;
-import model.County;
-import model.Province;
 
 public class Utility {
 
@@ -56,7 +57,6 @@ public static boolean handleCitiesResponse(CoolWeatherDB coolWeatherDB,
 			return true;
 		}
 	}
-	
 	
 			return false;
 	

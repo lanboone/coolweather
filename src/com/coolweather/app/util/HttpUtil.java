@@ -1,4 +1,4 @@
-package util;
+package com.coolweather.app.util;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
